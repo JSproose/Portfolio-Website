@@ -1,96 +1,128 @@
-import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
+import { Container, Row, Col, Tab, Nav, Carousel } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/forth project.jpg";
-import projImg2 from "../assets/img/second work.jpg";
-import projImg3 from "../assets/img/project1.jpg";
-import projImg4 from "../assets/img/first work.jpg";
-import projImg5 from "../assets/img/fifth work.jpg";
-import projImg6 from "../assets/img/12345.jpg";
-import colorSharp2 from "../assets/img/color-sharp2.png";
+
+import blogBanner from "../assets/img/blog-1.png";
+import blog1 from "../assets/img/blog-1.png";
+import blog2 from "../assets/img/blog-2.png";
+import blog3 from "../assets/img/blog-3.png";
+import blog4 from "../assets/img/blog-4.png";
+
+import rayMarchEngineBanner from "../assets/img/ray-march-engine-1.png";
+import ray1 from "../assets/img/ray-1.png";
+import ray2 from "../assets/img/ray-2.png";
+import ray3 from "../assets/img/ray-3.png";
+
+import blenderBanner from "../assets/img/blender-1.png";
+import blend1 from "../assets/img/blend-1.png";
+import blend2 from "../assets/img/blend-2.png";
+import blend3 from "../assets/img/blend-3.png";
+import blend4 from "../assets/img/blend-4.png";
+
+import perpetualMotion1 from "../assets/video/perpetual-motion-1.mp4";
+import perpetualMotion2 from "../assets/video/perpetual-motion-2.mp4";
+import machine from "../assets/video/machine.mp4";
+import artDeco from "../assets/video/art-deco.mp4";
+
 import 'animate.css';
-import TrackVisibility from 'react-on-screen';
 
 export const Projects = () => {
 
   const projects = [
     {
-      
-      description: "Design & Development",
-      imgUrl: projImg1,
+      title: "Ray Marching Engine",
+      imgUrl: rayMarchEngineBanner,
+      description: [ray1, ray2, ray3],
+      github: 'https://github.com/JSproose/Ray-Marching-App',
+      tags: ["React", "Javascript"],
     },
     {
-      description: "Design & Development",
-      imgUrl: projImg2,
+      title: "Blender Screen Saver Creator",
+      imgUrl: blenderBanner,
+      description: [blend1, blend2, blend3, blend4],
+      github: 'https://github.com/JSproose/PyQt-Blender-Screen-Saver-Creator',
+      tags: ["Blender", "Python"],
     },
     {
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
-    {
-      description: "Design & Development",
-      imgUrl: projImg4,
-    },
-    {
-      description: "Design & Development",
-      imgUrl: projImg5,
-    },
-    {
-      description: "Design & Development",
-      imgUrl: projImg6,
-    },
+      title: "Creative Writing Blog App",
+      imgUrl: blogBanner,
+      description: [blog1, blog2, blog3, blog4],
+      github: 'https://github.com/JSproose/Creative-Writing-Blog',
+      tags: ["React", "Javascript", "Node", "Express", "Firebase"],
+    }
   ];
 
   return (
-    <section className="project" id="project">
-      <Container>
+    <section className="blurred project" id="projects">
+      <Container fluid>
         <Row>
-          <Col size={12}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                <h2>Projects</h2>
-                <p>I show you to all the big and small websites I have done so far</p>
-                <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                  <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-                    <Nav.Item>
-                      <Nav.Link eventKey="first">Tab 1</Nav.Link>
-                    </Nav.Item>
-                    {/* <Nav.Item>
-                      <Nav.Link eventKey="second">Tab 2</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="third">Tab 3</Nav.Link>
-                    </Nav.Item> */}
-                  </Nav>
-                  <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
-                    <Tab.Pane eventKey="first">
-                      <Row>
-                        {
-                          projects.map((project, index) => {
-                            return (
-                              <ProjectCard
-                                key={index}
-                                {...project}
-                                />
-                            )
-                          })
-                        }
-                      </Row>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="section">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="third">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
-                    </Tab.Pane>
-                  </Tab.Content>
-                </Tab.Container>
-              </div>}
-            </TrackVisibility>
+          <Col>
+            <h2>PROJECTS</h2>
+            <Tab.Container id="projects-tabs" defaultActiveKey="first">
+              <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
+                <Nav.Item>
+                  <Nav.Link eventKey="first">Software</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="second">3D</Nav.Link>
+                </Nav.Item>
+              </Nav>
+              <Tab.Content id="slideInUp">
+                <Tab.Pane eventKey="first">
+                  <Row>
+                    {
+                      projects.map((project, index) => {
+                        return (
+                          <ProjectCard
+                            key={index}
+                            {...project}
+                            />
+                        )
+                      })
+                    }
+                  </Row>
+                </Tab.Pane>
+                <Tab.Pane eventKey="second">
+                  <Carousel>
+                    <Carousel.Item>
+                      <div className="video-carousel">
+                        <video autoPlay loop>
+                            <source src={perpetualMotion1} type="video/mp4"></source>
+                            Sorry, your browser doesn't support videos.
+                        </video>
+                      </div>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                      <div className="video-carousel">
+                        <video autoPlay loop>
+                            <source src={perpetualMotion2} type="video/mp4"></source>
+                            Sorry, your browser doesn't support videos.
+                        </video>
+                      </div>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                      <div className="video-carousel">
+                        <video autoPlay loop>
+                            <source src={machine} type="video/mp4"></source>
+                            Sorry, your browser doesn't support videos.
+                        </video>
+                      </div>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                      <div className="video-carousel">
+                        <video autoPlay loop>
+                            <source src={artDeco} type="video/mp4"></source>
+                            Sorry, your browser doesn't support videos.
+                        </video>
+                      </div>
+                    </Carousel.Item>
+                </Carousel>
+
+                </Tab.Pane>
+              </Tab.Content>
+            </Tab.Container>
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2}></img>
     </section>
   )
 }
