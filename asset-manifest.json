@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.8bd558c6.css",
-    "main.js": "/static/js/main.30066514.js",
+    "main.js": "/static/js/main.fbe786fe.js",
     "static/js/787.fb771931.chunk.js": "/static/js/787.fb771931.chunk.js",
     "static/media/art-deco.mp4": "/static/media/art-deco.34010419389ac7c5e37a.mp4",
     "static/media/ray-1.png": "/static/media/ray-1.adec9fcf71b7357b58bb.png",
@@ -16,6 +16,7 @@
     "static/media/blend-4.png": "/static/media/blend-4.d74b3dffefa70dd80e8b.png",
     "static/media/blend-1.png": "/static/media/blend-1.79d40e3b1f3fffaf2bb7.png",
     "static/media/machine.mp4": "/static/media/machine.8af53b6729215bbd7fd1.mp4",
+    "static/media/sohoVFX.jpeg": "/static/media/sohoVFX.d94174d1c116f29655d2.jpeg",
     "static/media/blender-1.png": "/static/media/blender-1.227f4df7c412e9abcddc.png",
     "static/media/waterloo-floor-plan.pdf": "/static/media/waterloo-floor-plan.1d90bdf43210302b9b84.pdf",
     "static/media/CentraNo2-Bold.ttf": "/static/media/CentraNo2-Bold.2faff7f7d3fc92a2fcd9.ttf",
@@ -44,11 +45,11 @@
     "static/media/iconmonstr-external-link-thin.svg": "/static/media/iconmonstr-external-link-thin.2a18803ed26bc6eacfbf7d1c36ad3fdd.svg",
     "static/media/qt.svg": "/static/media/qt.264f26c75719df966df178cb92fdca1d.svg",
     "main.8bd558c6.css.map": "/static/css/main.8bd558c6.css.map",
-    "main.30066514.js.map": "/static/js/main.30066514.js.map",
+    "main.fbe786fe.js.map": "/static/js/main.fbe786fe.js.map",
     "787.fb771931.chunk.js.map": "/static/js/787.fb771931.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8bd558c6.css",
-    "static/js/main.30066514.js"
+    "static/js/main.fbe786fe.js"
   ]
 }
